@@ -64,7 +64,7 @@ This template uses Liquid templating to create a more dynamic and maintainable s
    git init
    git add .
    git commit -m "Initial commit"
-   git remote add origin https://github.com/YOUR-USERNAME/lively-jekyll-website.git
+   git remote add origin https://github.com/YOUR-USERNAME/lively-jekyll-liquid.git
    git push -u origin main
    ```
 
@@ -74,4 +74,4 @@ This template uses Liquid templating to create a more dynamic and maintainable s
    - Select "main" branch as the source
    - Save the settings
 
-4. Your site will be published at `https://YOUR-USERNAME.github.io/lively-jekyll-website/`
+4. Your site will be published at `https://YOUR-USERNAME.github.io/lively-jekyll-liquid/`
