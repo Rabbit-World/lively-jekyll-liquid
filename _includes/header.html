@@ -4,7 +4,7 @@
 <!-- navigation -->
 <div class="nav">
   <div>
-    <img src="{{ '/assets/logo.webp' | relative_url }}" alt="lively wallpaper logo" />
+    <img src="{{ '/assets/images/logo.webp' | relative_url }}" alt="lively wallpaper logo" />
     <h4>{{ t.nav.home }}</h4>
   </div>
   <div>
@@ -41,7 +41,7 @@
 <div class="language-switcher">
   <ul>
     <li>
-      <a href="{{ '/en/' | relative_url }}" {% if lang == 'en' %}class="active"{% endif %}>EN</a>
+      <a href="{{ '/' | relative_url }}" {% if lang == 'en' %}class="active"{% endif %}>EN</a>
     </li>
     <li>
       <a href="{{ '/it/' | relative_url }}" {% if lang == 'it' %}class="active"{% endif %}>IT</a>
