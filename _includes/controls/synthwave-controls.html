@@ -1,0 +1,48 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.languages[lang] %}
+
+<div id="ui-app-customise-controls-synthwave" style="display: none">
+  <p class="slider-label">{{ t.synthwave_controls.draw }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 50% 100%"
+    type="range"
+    min="0"
+    max="2"
+    value="1.0"
+    step="0.01"
+    oninput="setProperty('u_draw',this.value)"
+  />
+  <p class="slider-label">{{ t.synthwave_controls.plane }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 70% 100%"
+    type="range"
+    min="0"
+    max="1"
+    value="0.7"
+    step="0.01"
+    oninput="setProperty('u_plane',this.value)"
+  />
+  <p class="slider-label">{{ t.synthwave_controls.sun }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 50% 100%"
+    type="range"
+    min="0"
+    max="1"
+    value="0.5"
+    step="0.01"
+    oninput="setProperty('u_sun',this.value)"
+  />
+  <br />
+  <div>
+    <input
+      autocomplete="off"
+      type="checkbox"
+      unchecked
+      onchange="setProperty('u_crt_effect',this.checked ? true : false)"
+    />
+    <label class="checkbox-label">{{ t.synthwave_controls.crt }}</label>
+  </div>
+</div>

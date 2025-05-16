@@ -1,0 +1,31 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.languages[lang] %}
+
+<div id="ui-app-customise-controls-test" style="display: none">
+  <p class="slider-label">{{ t.magic.size }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 40% 100%"
+    type="range"
+    min="0"
+    max="1"
+    value="0.4"
+    step="0.01"
+  />
+  <br />
+  <div class="dropdown">
+    <button class="dropbtn">{{ t.magic.dropdown }}</button>
+    <div class="dropdown-content">
+      <a>{{ t.magic.link1 }}</a>
+      <a>{{ t.magic.link2 }}</a>
+      <a>{{ t.magic.link3 }}</a>
+    </div>
+  </div>
+  <br />
+  <button class="fluent-button">{{ t.magic.click_me }}</button>
+  <br />
+  <div>
+    <input autocomplete="off" type="checkbox" name="vox" checked />
+    <label class="checkbox-label">{{ t.magic.check }}</label>
+  </div>
+</div>

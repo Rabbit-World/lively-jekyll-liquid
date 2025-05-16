@@ -1,0 +1,15 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.languages[lang] %}
+
+<div id="footer">
+  <div>
+    <img alt="github profile" src="https://avatars.githubusercontent.com/rocksdanister" class="avatar" />
+    <h4>{{ t.footer.name }}</h4>
+    <a href="mailto: {{ t.footer.email }}">{{ t.footer.email }}</a>
+    <br />
+    <a href="https://www.rocksdanister.com/" target="_blank">{{ t.footer.website }}</a>
+  </div>
+  <div id="footer-attribution">
+    <a>{{ t.footer.attribution }}</a>
+  </div>
+</div>

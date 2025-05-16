@@ -1,0 +1,53 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.languages[lang] %}
+
+<div id="ui-app-customise-controls-clouds" style="display: none">
+  <p class="slider-label">{{ t.clouds_controls.scale }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 30.5% 100%"
+    type="range"
+    min="0"
+    max="2"
+    value="0.61"
+    step="0.01"
+    oninput="setProperty('u_scale',this.value)"
+  />
+  <p class="slider-label">{{ t.clouds_controls.speed }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 5% 100%"
+    type="range"
+    min="0.0"
+    max="5"
+    value="0.25"
+    step="0.01"
+    oninput="setProperty('u_speed',this.value)"
+  />
+  <br />
+  <p class="slider-label">{{ t.clouds_controls.density_color }}</p>
+  <input
+    autocomplete="off"
+    type="color"
+    class="colorpicker"
+    oninput="setProperty('u_color1',this.value)"
+    value="#87b0b7"
+  />
+  <p class="slider-label">{{ t.clouds_controls.fog_color }}</p>
+  <input
+    autocomplete="off"
+    type="color"
+    class="colorpicker"
+    oninput="setProperty('u_fog_color',this.value)"
+    value="#0F1C1C"
+  />
+  <div>
+    <input
+      autocomplete="off"
+      type="checkbox"
+      checked
+      onchange="setProperty('u_fog',this.checked ? true : false)"
+    />
+    <label class="checkbox-label">{{ t.clouds_controls.fog }}</label>
+  </div>
+</div>

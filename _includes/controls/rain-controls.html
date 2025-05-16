@@ -1,0 +1,56 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.languages[lang] %}
+
+<div id="ui-app-customise-controls-rain">
+  <p class="slider-label">{{ t.rain_controls.intensity }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 40% 100%"
+    type="range"
+    min="0"
+    max="1"
+    value="0.4"
+    step="0.01"
+    oninput="setProperty('u_intensity',this.value)"
+  />
+  <p class="slider-label">{{ t.rain_controls.size }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 13% 100%"
+    type="range"
+    min="0.1"
+    max="3"
+    value="0.39"
+    step="0.01"
+    oninput="setProperty('u_zoom',3 - this.value)"
+  />
+  <p class="slider-label">{{ t.rain_controls.speed }}</p>
+  <input
+    autocomplete="off"
+    style="background-size: 2.5% 100%"
+    type="range"
+    min="0"
+    max="10"
+    value="0.25"
+    step="0.01"
+    oninput="setProperty('u_speed',this.value)"
+  />
+  <br />
+  <div class="dropdown">
+    <button class="dropbtn">{{ t.rain_controls.change_background }}</button>
+    <div class="dropdown-content">
+      <a onclick="setTexture('u_tex0', 'media/rain_mountain.webp')">{{ t.rain_controls.mountain }}</a>
+      <a onclick="setTexture('u_tex0', 'media/rain_forest.webp')">{{ t.rain_controls.forest }}</a>
+      <a onclick="openFilePicker()">{{ t.rain_controls.custom }}</a>
+    </div>
+  </div>
+  <div>
+    <input
+      autocomplete="off"
+      type="checkbox"
+      checked
+      onchange="setProperty('u_post_processing',this.checked ? true : false)"
+    />
+    <label class="checkbox-label">{{ t.rain_controls.post_processing }}</label>
+  </div>
+</div>

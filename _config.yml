@@ -1,0 +1,32 @@
+# Site settings
+title: Lively Wallpaper (Dynamic)
+email: awoo.git@gmail.com
+description: Lively Wallpaper is a free and open-source animated desktop wallpaper and screensaver software.
+baseurl: "/lively-jekyll-liquid" # the subpath of your site, e.g. /blog
+url: "https://rabbit-world.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: rocksdanister
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Multilingual settings
+languages: ["en", "it"]
+default_lang: "en"
+exclude_from_localization: ["assets", "js", "styles", "media", "shaders"]
+parallel_localization: true
+
+# Dynamic template settings
+liquid_template: true
+dynamic_content: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - temp/
