@@ -23,7 +23,7 @@ permalink: /
 <div id="page-home">
   <div class="heading">
     <div>
-      <img alt="lively wallpaper logo" src="{{ '/assets/logo.webp' | relative_url }}" width="125" class="logo" />
+      <img alt="lively wallpaper logo" src="{{ '/assets/images/logo.webp' | relative_url }}" width="125" class="logo" />
       <h1 style="margin-bottom: 0px; margin-top: 25px">{{ t.home.title }}</h1>
       <h3 style="margin-bottom: 0px; margin-top: 10px">{{ t.home.subtitle }}</h3>
       <p>
@@ -44,7 +44,7 @@ permalink: /
     <div id="ui-app-library">
       <div class="ui-app-overlay"></div>
       <div id="ui-app-titlebar">
-        <img alt="lively wallpaper logo" src="{{ '/assets/logo.webp' | relative_url }}" />
+        <img alt="lively wallpaper logo" src="{{ '/assets/images/logo.webp' | relative_url }}" />
         <a>Lively Wallpaper</a>
       </div>
       <div id="ui-app-titlebar-badge">
@@ -59,7 +59,7 @@ permalink: /
         </map>
         <img
           alt="microsoft store award 2023"
-          src="{{ '/assets/store_award_badge.webp' | relative_url }}"
+          src="{{ '/assets/images/store_award_badge.webp' | relative_url }}"
           width="155"
           usemap="#ms-store-award-map"
         />
@@ -74,7 +74,7 @@ permalink: /
           <li id="{{ wallpaper }}" class="library">
             <img
               alt="{{ wallpaper }} wallpaper"
-              src="{{ '/assets/' | append: wallpaper | append: '_preview.webp' | relative_url }}"
+              src="{{ '/assets/images/' | append: wallpaper | append: '_preview.webp' | relative_url }}"
               {% if wallpaper == 'rain' %}style="outline: 2.5px solid #a425a0"{% endif %}
               width="600"
               height="400"
@@ -125,7 +125,7 @@ permalink: /
     {% for feature in features %}
       {% assign index = forloop.index %}
       <li class="card" id="feature-card-{{ index }}">
-        <img alt="{{ feature }}" src="{{ '/assets/icons/' | append: icons[forloop.index0] | append: '.svg' | relative_url }}" class="white-filter" />
+        <img alt="{{ feature }}" src="{{ '/assets/images/icons/' | append: icons[forloop.index0] | append: '.svg' | relative_url }}" class="white-filter" />
         <div>{{ t.features[feature].title }}</div>
         <p>{{ t.features[feature].description }}</p>
       </li>
@@ -148,7 +148,7 @@ permalink: /
       {% assign gallery_items = "fluid,music,wave,system,synthwave" | split: "," %}
       
       {% for item in gallery_items %}
-        <div class="item item-{{ forloop.index }}" data-delayedsrc="url({{ '/assets/promo/gallery' | append: forloop.index | append: '.webp' | relative_url }})">
+        <div class="item item-{{ forloop.index }}" data-delayedsrc="url({{ '/assets/images/promo/gallery' | append: forloop.index | append: '.webp' | relative_url }})">
           <p>{{ t.gallery[item] }}</p>
         </div>
       {% endfor %}
@@ -173,7 +173,7 @@ permalink: /
         href="https://github.com/rocksdanister/lively/releases/download/v2.1.0.8/lively_setup_x86_full_v2108.exe"
       >
         <div class="download-wrapper">
-          <img alt="lively installer" src="{{ '/assets/icons/download.svg' | relative_url }}" class="white-filter" />
+          <img alt="lively installer" src="{{ '/assets/images/icons/download.svg' | relative_url }}" class="white-filter" />
           <div>
             <span>{{ t.download.windows }}</span>
             <h1>{{ t.download.installer }}</h1>
